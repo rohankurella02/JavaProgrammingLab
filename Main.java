@@ -1,21 +1,21 @@
 package com.company;
 
-import java.util.*;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 
 public class Main {
 
     public static void main(String[] args) {
-	    //String s[] = new String[10];
-        List<String> list=new ArrayList<String>();
-        //String temp = new String();
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        for(int i=0 ; i<n ; i++) {
-            list.add(sc.next());
+        int a = 2;
+
+        try {
+            FileInputStream f = new FileInputStream("D://folder");
+            //System.out.println(a/0);
         }
-        Collections.sort(list);
-        for(int i=0 ; i<n ; i++) {
-            System.out.println(list.get(i));
+        catch (FileNotFoundException e) {
+            System.out.println("Exception is " + e.getMessage());
+
         }
+
     }
 }
